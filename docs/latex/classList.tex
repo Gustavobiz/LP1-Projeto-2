@@ -1,0 +1,130 @@
+\hypertarget{classList}{}\doxysection{Referência do \texorpdfstring{$<$}{<}em\texorpdfstring{$>$}{>}Template\texorpdfstring{$<$}{<}/em\texorpdfstring{$>$}{>} da Classe List\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}}
+\label{classList}\index{List$<$ T $>$@{List$<$ T $>$}}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classList_a5c5e27671b21b3815d4e25b953c69454}\label{classList_a5c5e27671b21b3815d4e25b953c69454}} 
+{\bfseries List} ()
+\begin{DoxyCompactList}\small\item\em O construtor \mbox{\hyperlink{classList}{List}} sem argumento seta as variáveis ponteiro head e tail como nulas. Isso assegura que a lista encadeada gerada a partir de objetos \mbox{\hyperlink{classList}{List}} iniciem sempre vazias, ou seja, com o primeiro nó apontando para o nullptr. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classList_a2b58189090f6e5ce52939c9195e59e85}\label{classList_a2b58189090f6e5ce52939c9195e59e85}} 
+{\bfseries $\sim$\+List} ()
+\begin{DoxyCompactList}\small\item\em O destrutor \mbox{\hyperlink{classList}{List}} desaloca cada instância do objeto \mbox{\hyperlink{classNode}{Node}} da lista encadeada. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classList_a6fb8ecc093e4ece6f614b3a0cbd9f0e2}\label{classList_a6fb8ecc093e4ece6f614b3a0cbd9f0e2}} 
+int {\bfseries get\+Length} ()
+\item 
+bool \mbox{\hyperlink{classList_a73f8b1d313382daffeeeed552f42da2f}{is\+Empty}} ()
+\begin{DoxyCompactList}\small\item\em Esta função verifica se a lista encadeada está vazia. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classList_a7792880a25d5fd9faa702c12858b63ab}{is\+Full}} ()
+\begin{DoxyCompactList}\small\item\em Esta função verifica se a lista encadeada está cheia. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classList_a321ed667be59726c414e7e171381e6e8}{push}} (T item)
+\begin{DoxyCompactList}\small\item\em Esta função adiciona um novo elemento à lista encadeada. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classList_a3845271760d2fbf113247ce427ef9a4a}\label{classList_a3845271760d2fbf113247ce427ef9a4a}} 
+void {\bfseries pop} ()
+\begin{DoxyCompactList}\small\item\em Esta função remove um novo elemento da lista encadeada. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classNode}{Node}}$<$ T $>$ $\ast$ \mbox{\hyperlink{classList_a1382aa0bc45e5ad775f56e79cd5dfa5c}{get}} (int index)
+\begin{DoxyCompactList}\small\item\em Esta função procura por um elemento da lista encadeada a partir de um index (int) específico. @params index Um inteiro que será usado como index do elemento procurado. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classList_ae9266348c128b85ee3ca738733da3653}\label{classList_ae9266348c128b85ee3ca738733da3653}} 
+void {\bfseries remove} (int i)
+\begin{DoxyCompactList}\small\item\em Esta função remove um elemento da lista encadeada a partir de um index (int) específico. @params i Um inteiro que será usado como index do elemento a ser removido. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classList_a777bc80ab5d8c31fabcab74757913256}\label{classList_a777bc80ab5d8c31fabcab74757913256}} 
+void {\bfseries print} (int i)
+\begin{DoxyCompactList}\small\item\em Esta função imprime todos os elementos da lista encadeada de maneira recursiva. @params i Um inteiro que será usado como index do elemento a ser impresso. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classNode}{Node}}$<$ T $>$ $\ast$ \mbox{\hyperlink{classList_ae1a61bf8478bde5c20ff70e7c483e28b}{head}}
+\item 
+\mbox{\hyperlink{classNode}{Node}}$<$ T $>$ $\ast$ \mbox{\hyperlink{classList_ae9ac5836a3c8b4b4953030082b014425}{tail}}
+\item 
+int \mbox{\hyperlink{classList_acfa1a692247f2155ce91f46d031928e9}{length}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classList_a1382aa0bc45e5ad775f56e79cd5dfa5c}\label{classList_a1382aa0bc45e5ad775f56e79cd5dfa5c}} 
+\index{List$<$ T $>$@{List$<$ T $>$}!get@{get}}
+\index{get@{get}!List$<$ T $>$@{List$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classNode}{Node}}$<$ T $>$ $\ast$ \mbox{\hyperlink{classList}{List}}$<$ T $>$\+::get (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Esta função procura por um elemento da lista encadeada a partir de um index (int) específico. @params index Um inteiro que será usado como index do elemento procurado. 
+
+\begin{DoxyReturn}{Retorna}
+Um ponteiro que aponta para uma instância da classe \mbox{\hyperlink{classNode}{Node}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classList_a73f8b1d313382daffeeeed552f42da2f}\label{classList_a73f8b1d313382daffeeeed552f42da2f}} 
+\index{List$<$ T $>$@{List$<$ T $>$}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!List$<$ T $>$@{List$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classList}{List}}$<$ T $>$\+::is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Esta função verifica se a lista encadeada está vazia. 
+
+\begin{DoxyReturn}{Retorna}
+Retorna um boolenao, isto é, 1 caso a lista esteja vazia, ou 0 caso contrário. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classList_a7792880a25d5fd9faa702c12858b63ab}\label{classList_a7792880a25d5fd9faa702c12858b63ab}} 
+\index{List$<$ T $>$@{List$<$ T $>$}!isFull@{isFull}}
+\index{isFull@{isFull}!List$<$ T $>$@{List$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{isFull()}{isFull()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classList}{List}}$<$ T $>$\+::is\+Full (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Esta função verifica se a lista encadeada está cheia. 
+
+\begin{DoxyReturn}{Retorna}
+Retorna um booleano, isto é, 1 caso a lista esteja cheia, ou 0 caso contrário. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classList_a321ed667be59726c414e7e171381e6e8}\label{classList_a321ed667be59726c414e7e171381e6e8}} 
+\index{List$<$ T $>$@{List$<$ T $>$}!push@{push}}
+\index{push@{push}!List$<$ T $>$@{List$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classList}{List}}$<$ T $>$\+::push (\begin{DoxyParamCaption}\item[{T}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Esta função adiciona um novo elemento à lista encadeada. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em item} & Uma variável do tipo template que armazena o valor a ser inserido à lista. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{classList_ae1a61bf8478bde5c20ff70e7c483e28b}\label{classList_ae1a61bf8478bde5c20ff70e7c483e28b}} 
+\index{List$<$ T $>$@{List$<$ T $>$}!head@{head}}
+\index{head@{head}!List$<$ T $>$@{List$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{head}{head}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classNode}{Node}}$<$T$>$$\ast$ \mbox{\hyperlink{classList}{List}}$<$ T $>$\+::head\hspace{0.3cm}{\ttfamily [private]}}
+
+Este instância da classe \mbox{\hyperlink{classNode}{Node}} aponta para o primeiro Nó da lista encadeada. \mbox{\Hypertarget{classList_acfa1a692247f2155ce91f46d031928e9}\label{classList_acfa1a692247f2155ce91f46d031928e9}} 
+\index{List$<$ T $>$@{List$<$ T $>$}!length@{length}}
+\index{length@{length}!List$<$ T $>$@{List$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{length}{length}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int \mbox{\hyperlink{classList}{List}}$<$ T $>$\+::length = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+Este variável armazena o tamanho da lista encadeada. \mbox{\Hypertarget{classList_ae9ac5836a3c8b4b4953030082b014425}\label{classList_ae9ac5836a3c8b4b4953030082b014425}} 
+\index{List$<$ T $>$@{List$<$ T $>$}!tail@{tail}}
+\index{tail@{tail}!List$<$ T $>$@{List$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{tail}{tail}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classNode}{Node}}$<$T$>$$\ast$ \mbox{\hyperlink{classList}{List}}$<$ T $>$\+::tail\hspace{0.3cm}{\ttfamily [private]}}
+
+Este instância da classe \mbox{\hyperlink{classNode}{Node}} aponta para o último Nó da lista encadeada. 
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+include/List.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,73 @@
+\hypertarget{classMusic}{}\doxysection{Referência da Classe Music}
+\label{classMusic}\index{Music@{Music}}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMusic_a637a80e639463fa7b3d4afa94e0e7787}\label{classMusic_a637a80e639463fa7b3d4afa94e0e7787}} 
+void {\bfseries set\+Name} (string n)
+\item 
+\mbox{\Hypertarget{classMusic_a45e0fb29274d351da8a572a47c45cdb6}\label{classMusic_a45e0fb29274d351da8a572a47c45cdb6}} 
+string {\bfseries get\+Name} ()
+\item 
+\mbox{\Hypertarget{classMusic_a9818e34ce070e93fc08aca6e4648f0fc}\label{classMusic_a9818e34ce070e93fc08aca6e4648f0fc}} 
+void {\bfseries set\+Artist} (string a)
+\item 
+\mbox{\Hypertarget{classMusic_a5290dd6b47816783a12b5e1b6747954a}\label{classMusic_a5290dd6b47816783a12b5e1b6747954a}} 
+string {\bfseries get\+Artist} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classMusic_a1eadf12e0e2b4ccd5e9d1ef84a35967b}{name}}
+\item 
+string \mbox{\hyperlink{classMusic_adb447964c412f03de9032d5be442fba8}{artist}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \mbox{\hyperlink{classMusic_a4a4d9bab2d73899fb0e1052e0234a774}{operator$<$$<$}} (ostream \&os, \mbox{\hyperlink{classMusic}{Music}} m)
+\begin{DoxyCompactList}\small\item\em Essa função sobrecarrega o operador \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<}, de modo a determinar um padrão de saída da classe \mbox{\hyperlink{classMusic}{Music}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Amigas e Funções Relacionadas}
+\mbox{\Hypertarget{classMusic_a4a4d9bab2d73899fb0e1052e0234a774}\label{classMusic_a4a4d9bab2d73899fb0e1052e0234a774}} 
+\index{Music@{Music}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Music@{Music}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{os,  }\item[{\mbox{\hyperlink{classMusic}{Music}}}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Essa função sobrecarrega o operador \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<}, de modo a determinar um padrão de saída da classe \mbox{\hyperlink{classMusic}{Music}}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em os} & Uma referência modificável do objeto ostream. \\
+\hline
+{\em m} & Uma instância da classe \mbox{\hyperlink{classMusic}{Music}} a ser enviada para saída padrão. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Uma refência do objeto ostream. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{classMusic_adb447964c412f03de9032d5be442fba8}\label{classMusic_adb447964c412f03de9032d5be442fba8}} 
+\index{Music@{Music}!artist@{artist}}
+\index{artist@{artist}!Music@{Music}}
+\doxysubsubsection{\texorpdfstring{artist}{artist}}
+{\footnotesize\ttfamily string Music\+::artist\hspace{0.3cm}{\ttfamily [private]}}
+
+Esta variável do tipo string armazena o nome do artista da música. \mbox{\Hypertarget{classMusic_a1eadf12e0e2b4ccd5e9d1ef84a35967b}\label{classMusic_a1eadf12e0e2b4ccd5e9d1ef84a35967b}} 
+\index{Music@{Music}!name@{name}}
+\index{name@{name}!Music@{Music}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily string Music\+::name\hspace{0.3cm}{\ttfamily [private]}}
+
+Esta variável do tipo string armazena o nome da música. 
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/Music.\+h\item 
+src/Music.\+cpp\end{DoxyCompactItemize}

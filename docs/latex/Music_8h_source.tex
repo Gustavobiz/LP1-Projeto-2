@@ -1,0 +1,30 @@
+\hypertarget{Music_8h_source}{}\doxysection{Music.\+h}
+\label{Music_8h_source}\index{include/Music.h@{include/Music.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef MUSIC\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define MUSIC\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <ostream>}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{class }\mbox{\hyperlink{classMusic}{Music}}\{}
+\DoxyCodeLine{10   \textcolor{keyword}{private}:}
+\DoxyCodeLine{11     \textcolor{keywordtype}{string} \mbox{\hyperlink{classMusic_a1eadf12e0e2b4ccd5e9d1ef84a35967b}{name}}; }
+\DoxyCodeLine{12     \textcolor{keywordtype}{string} \mbox{\hyperlink{classMusic_adb447964c412f03de9032d5be442fba8}{artist}}; }
+\DoxyCodeLine{14   \textcolor{keyword}{public}:}
+\DoxyCodeLine{15     \mbox{\hyperlink{classMusic}{Music}}();}
+\DoxyCodeLine{16     \mbox{\hyperlink{classMusic}{\string~Music}}();}
+\DoxyCodeLine{17     \textcolor{keywordtype}{void} setName(\textcolor{keywordtype}{string} n);}
+\DoxyCodeLine{18     \textcolor{keywordtype}{string} getName();}
+\DoxyCodeLine{19     \textcolor{keywordtype}{void} setArtist(\textcolor{keywordtype}{string} a);}
+\DoxyCodeLine{20     \textcolor{keywordtype}{string} getArtist();}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{28     \textcolor{keyword}{friend} ostream\& \mbox{\hyperlink{classMusic_a4a4d9bab2d73899fb0e1052e0234a774}{operator << }}(ostream\& os, \mbox{\hyperlink{classMusic}{Music}} m);}
+\DoxyCodeLine{29 \};}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

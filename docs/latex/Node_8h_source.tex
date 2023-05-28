@@ -1,0 +1,39 @@
+\hypertarget{Node_8h_source}{}\doxysection{Node.\+h}
+\label{Node_8h_source}\index{include/Node.h@{include/Node.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef NODE\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define NODE\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{5 \textcolor{keyword}{class }\mbox{\hyperlink{classNode}{Node}}\{}
+\DoxyCodeLine{6   \textcolor{keyword}{private}:}
+\DoxyCodeLine{7     T \mbox{\hyperlink{classNode_a01b9071c0de774c720b64583262d1559}{value}}; }
+\DoxyCodeLine{8     \mbox{\hyperlink{classNode}{Node}}* \mbox{\hyperlink{classNode_ac1c0563946c59c36bddde431b4adb00b}{next}}; }
+\DoxyCodeLine{10   \textcolor{keyword}{public}:}
+\DoxyCodeLine{11     }
+\DoxyCodeLine{12     \mbox{\hyperlink{classNode}{Node}}() \{\}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14     \mbox{\hyperlink{classNode}{\string~Node}}() \{\}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16     T\& getValue() \{}
+\DoxyCodeLine{17       \textcolor{keywordflow}{return} \mbox{\hyperlink{classNode_a01b9071c0de774c720b64583262d1559}{value}};}
+\DoxyCodeLine{18     \}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20     \textcolor{keywordtype}{void} setValue(T v) \{}
+\DoxyCodeLine{21       \mbox{\hyperlink{classNode_a01b9071c0de774c720b64583262d1559}{value}} = v;}
+\DoxyCodeLine{22     \}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24     \mbox{\hyperlink{classNode}{Node}}* getNext() \{}
+\DoxyCodeLine{25       \textcolor{keywordflow}{return} \mbox{\hyperlink{classNode_ac1c0563946c59c36bddde431b4adb00b}{next}};}
+\DoxyCodeLine{26     \}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28     \textcolor{keywordtype}{void} setNext(\mbox{\hyperlink{classNode}{Node}}* n) \{}
+\DoxyCodeLine{29       \mbox{\hyperlink{classNode_ac1c0563946c59c36bddde431b4adb00b}{next}} = n;}
+\DoxyCodeLine{30     \}}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 \};}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
