@@ -215,7 +215,7 @@ public:
     }
   }
 
-  List<T> copy(List<T> &l) {
+  List<T> copy(List<T> &l) {  //new
     List<T> list;
 
     for(int i=0; i<l.length; i++) {
