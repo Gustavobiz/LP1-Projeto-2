@@ -18,9 +18,9 @@ class Playlist{
     List<Music>* getList();
     void push(Music m);
     void remove(int i);
-    void unshift(List<Music> &l);
+    void unshift(List<Music> &l); //new todos elementos para uma nova lista
     int getForIndex(Music m);
-    void removeList(List<Music> &l);
+    void removeList(List<Music> &l);//new
 }; 
 
 #endif
