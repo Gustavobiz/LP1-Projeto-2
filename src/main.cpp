@@ -125,7 +125,10 @@ int main() {
         cout << "Digite 1 para adicionar música em uma playlist\n";
         cout << "Digite 2 para remover uma música de uma playlist\n";
         cout << "Digite 3 para mover uma música de uma playlist para outra\n";
-        cout << "Digite 4 para adicionar uma playlist a outra\n";
+        cout << "Digite 4 para adicionar unir listas\n";
+        //new gust
+        cout << "Digite 5 para adicionar uma playlist a outra\n";
+
     
         cin >> option2;
 
@@ -175,6 +178,19 @@ int main() {
 
           my_playlists.get(playlist_index_add)->getValue().list.length = 0;
         }
+        //gustavo
+        else if(option2 == 5) {
+          cout << "Digite o índex da playlist de origem: ";
+          int index_origem;
+          cin >> index_origem;
+
+          cout << "Digite o índex da playlist de destino: ";
+          int index_destino;
+          cin >> index_destino;
+          my_playlists.get(index_destino)->getValue().addPlaylist(my_playlists.get(index_origem)->getValue());
+  
+        }
+
       } while (option2 != 0);
     }
   } while(option != 0);

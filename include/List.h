@@ -134,6 +134,8 @@ public:
     }
   }
 
+
+
   /**
    * @brief Esta função procura por um elemento da lista encadeada a partir de
    * um index (int) específico.
@@ -272,6 +274,27 @@ public:
       }
     }
   }
+T popRet() {
+  if (isEmpty()) {
+    cout << "Não foi possível remover um elemento, pois a lista está vazia.\n" << endl;
+    // Retorne um valor padrão ou lance uma exceção, dependendo do requisito do seu programa.
+    return T();
+  } else {
+    Node<T> *temp = head;
+    head = head->getNext();
+
+    if (head == nullptr) {
+      tail = nullptr;
+    }
+
+    T removedElement = temp->getValue();
+    delete temp;
+    length--;
+
+    return removedElement;
+  }
+}
+
 };
 
 #endif

@@ -47,8 +47,9 @@ void Playlist::addPlaylist(Playlist& outraPlaylist) {
   List<Music>* outraList = outraPlaylist.getList();
   List<Music>* atualList = getList();
 
+
   while (!outraList->isEmpty()) {
-    Music mausica = outraList->pop();
+    Music mausica = outraList->popRet();
     atualList->push(mausica);
   }
 }
