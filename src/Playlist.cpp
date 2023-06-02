@@ -42,6 +42,16 @@ int Playlist::getForIndex(Music m) {
 void Playlist::removeList(List<Music> &l) {
   list.removeList(l);
 }
+//gustavo
+void Playlist::addPlaylist(Playlist& outraPlaylist) {
+  List<Music>* outraList = outraPlaylist.getList();
+  List<Music>* atualList = getList();
+
+  while (!outraList->isEmpty()) {
+    Music mausica = outraList->pop();
+    atualList->push(mausica);
+  }
+}
 
 /*
 

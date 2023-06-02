@@ -21,6 +21,9 @@ class Playlist{
     void unshift(List<Music> &l); //new todos elementos para uma nova lista
     int getForIndex(Music m);
     void removeList(List<Music> &l);//new
+    //teste gustavo
+    void addPlaylist(Playlist& outraPlaylist);
+
 }; 
 
 #endif
