@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <ostream>
+#include <string>
 
 using namespace std;
 
@@ -18,6 +19,7 @@ class Music{
     string getName();
     void setArtist(string a);
     string getArtist();
+    bool operator==(const Music& other) const;
 
     bool operator != (Music m);
 

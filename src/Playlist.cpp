@@ -49,9 +49,12 @@ void Playlist::addPlaylist(Playlist& outraPlaylist) {
 
 
   while (!outraList->isEmpty()) {
-    Music mausica = outraList->popRet();
-    atualList->push(mausica);
+    Music musica = outraList->popRet();
+        if (atualList->find(musica) == -1) {
+             atualList->push(musica);
+    }
   }
+
 }
 
 /*

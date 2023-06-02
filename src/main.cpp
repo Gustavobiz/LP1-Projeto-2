@@ -35,6 +35,11 @@ int main() {
   music_four.setArtist("Lucas Mamede");
   my_musics.push(music_four);
 
+  Music music_five;
+  music_five.setName("Já Ouviu Falar de Amor?");
+  music_five.setArtist("Lucas Mamede");
+  my_musics.push(music_five);
+
   do {
     cout << "Digite 0 para parar o programa!\n";
     cout << "Digite 1 para gerenciar músicas\n";
@@ -91,7 +96,8 @@ int main() {
         cout << "Digite 1 para cadastrar uma playlist\n";
         cout << "Digite 2 para remover uma playlist\n";
         cout << "Digite 3 para listar playlist\n";
-    
+        //new gust
+        cout << "Digite 4 para adicionar uma playlist a outra\n";    
         cin >> option2;
 
         if(option2 == 1) {
@@ -118,6 +124,18 @@ int main() {
             }
           }
         }
+        //gustavo
+        else if(option2 == 4) {
+          cout << "Digite o índex da playlist de origem: ";
+          int index_origem;
+          cin >> index_origem;
+
+          cout << "Digite o índex da playlist de destino: ";
+          int index_destino;
+          cin >> index_destino;
+          my_playlists.get(index_destino)->getValue().addPlaylist(my_playlists.get(index_origem)->getValue());
+  
+        }
       } while (option2 != 0);
     } else if(option == 3) {
       do {
@@ -125,9 +143,8 @@ int main() {
         cout << "Digite 1 para adicionar música em uma playlist\n";
         cout << "Digite 2 para remover uma música de uma playlist\n";
         cout << "Digite 3 para mover uma música de uma playlist para outra\n";
-        cout << "Digite 4 para adicionar unir listas\n";
-        //new gust
-        cout << "Digite 5 para adicionar uma playlist a outra\n";
+        cout << "Digite 4 para unir listas uma lista a outra\n";
+
 
     
         cin >> option2;
@@ -178,18 +195,7 @@ int main() {
 
           my_playlists.get(playlist_index_add)->getValue().list.length = 0;
         }
-        //gustavo
-        else if(option2 == 5) {
-          cout << "Digite o índex da playlist de origem: ";
-          int index_origem;
-          cin >> index_origem;
 
-          cout << "Digite o índex da playlist de destino: ";
-          int index_destino;
-          cin >> index_destino;
-          my_playlists.get(index_destino)->getValue().addPlaylist(my_playlists.get(index_origem)->getValue());
-  
-        }
 
       } while (option2 != 0);
     }

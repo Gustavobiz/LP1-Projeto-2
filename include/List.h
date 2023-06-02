@@ -6,7 +6,7 @@
 #include <ostream>
 
 using namespace std;
-
+class Music; // Declaração antecipada da classe Music, para evitar dependencia circular
 template <typename T>
 
 class List {
@@ -274,6 +274,7 @@ public:
       }
     }
   }
+  //gustavo
 T popRet() {
   if (isEmpty()) {
     cout << "Não foi possível remover um elemento, pois a lista está vazia.\n" << endl;
@@ -294,6 +295,25 @@ T popRet() {
     return removedElement;
   }
 }
+
+int find(const T& element) {
+  Node<T>* current = head;
+  int index = 0;
+
+  while (current != nullptr) {
+    if (current->getValue() == element) {
+      return index; // Retorna o índice se o elemento for encontrado
+    }
+
+    current = current->getNext();
+    index++;
+  }
+
+  return -1; // Retorna -1 se o elemento não for encontrado
+}
+
+
+
 
 };
 

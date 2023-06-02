@@ -33,3 +33,6 @@ ostream& operator << (ostream& os, Music m) {
   os << "Nome: " << m.name << " - Artista: " << m.artist;
   return os;
 }
+bool Music::operator==(const Music& other) const {
+    return (name == other.name) && (artist == other.artist);
+}
