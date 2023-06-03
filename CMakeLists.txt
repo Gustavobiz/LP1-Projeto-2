@@ -7,7 +7,7 @@ project (musicfy VERSION 0.1 LANGUAGES CXX)
 include_directories(include)
 
 add_executable( program
-                src/main.cpp
+                src/main_test.cpp
                 src/Music.cpp
                 src/Playlist.cpp
                 src/Split.cpp)

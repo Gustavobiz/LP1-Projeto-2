@@ -126,6 +126,10 @@ int main() {
         }
         //gustavo
         else if(option2 == 4) {
+           playlist play1;
+          play1.setName("test");
+          
+          my_playlists.push(music_one);
           cout << "Digite o índex da playlist de origem: ";
           int index_origem;
           cin >> index_origem;
@@ -133,8 +137,12 @@ int main() {
           cout << "Digite o índex da playlist de destino: ";
           int index_destino;
           cin >> index_destino;
-          my_playlists.get(index_destino)->getValue().addPlaylist(my_playlists.get(index_origem)->getValue());
-  
+         // play1=my_playlists.get(index_destino)+my_playlists.get(index_origem);
+        //  cout <<play1.getValue();
+           
+        /* my_playlists.get(index_destino)->getValue().addPlaylist(my_playlists.get(index_origem)->getValue());
+          my_playlists.remove(index_origem);
+          */
         }
       } while (option2 != 0);
     } else if(option == 3) {
