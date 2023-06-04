@@ -42,18 +42,28 @@ int main() {
   my_musics.push(music_four);
   playlist1.push(music_four);
   playlist2.push(music_four);
+  Playlist playlist3;
+  playlist3= playlist1 + music_three;
+  playlist3.getList()->print(0);
+  
+  // playlist3.copyPlaylist(playlist1);
+  // playlist3.getList()->print(0);
+  // cout<<"______________________________________________"<<endl;
+  // playlist3.push(playlist2);
+  // playlist3.getList()->print(0);
+
 
   // Music music_five;
   // music_five.setName("Já Ouviu Falar de Amor?");
   // music_five.setArtist("Lucas Mamede");
   // playlist1.push(music_five);
 
-  playlist1.remove(playlist2);
-  playlist1.getList()->print(0);
-  cout<<"______________________________________________"<<endl;
-  Playlist playlist3= playlist2+playlist1;
+  // playlist1.remove(playlist2);
+  // playlist1.getList()->print(0);
+  // cout<<"______________________________________________"<<endl;
+  // Playlist playlist3= playlist2+playlist1;
 
-  playlist3.getList()->print(0);
+  // playlist3.getList()->print(0);
   // my_musics.print(0);
   
   // cout << "------------- depois ------------------\n" << endl;

@@ -43,41 +43,15 @@ void Playlist::removeList(List<Music> &l) {
   list.removeList(l);
 }
 //gustavo
-/*
+
 void Playlist::push(Playlist& outraPlaylist) {
   List<Music>* outraList = outraPlaylist.getList();
-  List<Music>* atualList = getList();
+  list.unshift(*outraList);
+  
 
-
-  while (!outraList->isEmpty()) {
-    Music musica = outraList->popRet();
-        if (atualList->find(musica) == -1) {
-             atualList->push(musica);
-    }
-  }
-
-}*/
-
-Playlist Playlist::operator+(Playlist& outraPlaylist) {
-  Playlist novaPlaylist;
-
- novaPlaylist.unshift(list);
- /* for (int i = 0; i < list.getLength(); i++) {
-    Music musica = list.get(i)->getValue();
-    if (novaPlaylist.getList()->find(musica) == -1) {
-      novaPlaylist.getList()->push(musica);
-    }
-  }*/
-  List<Music>* outraList = outraPlaylist.getList();
-  for (int i = 0; i < outraList->getLength(); i++) {
-    Music musica = outraList->get(i)->getValue();
-    if (novaPlaylist.getList()->find(musica) == -1) {
-      novaPlaylist.getList()->push(musica);
-    }
-  }
-
-  return novaPlaylist;
 }
+
+
 
 int Playlist::remove(Playlist& outraPlaylist) {
   List<Music>* outraList = outraPlaylist.getList();
@@ -87,7 +61,7 @@ int Playlist::remove(Playlist& outraPlaylist) {
 
   for (int i = 0; i < outraList->getLength(); i++) {
     Music musica = outraList->get(i)->getValue();
-    int x=currentList->find(musica);
+    int x=currentList->finding(musica);
     if (x > -1) {
       currentList->remove(x);
       Count++;
@@ -96,6 +70,36 @@ int Playlist::remove(Playlist& outraPlaylist) {
 
   return Count;
 }
+
+void Playlist::copyPlaylist(Playlist& outraPlay) {
+  name = outraPlay.name;
+  list = list.copy(outraPlay.list);
+}
+
+Playlist Playlist::operator + (Playlist& outraPlaylist) {
+  Playlist novaPlaylist;
+
+ novaPlaylist.unshift(list);
+
+  List<Music>* outraList = outraPlaylist.getList();
+  for (int i = 0; i < outraList->getLength(); i++) {
+    Music musica = outraList->get(i)->getValue();
+    if (novaPlaylist.getList()->finding(musica) == -1) {
+      novaPlaylist.getList()->push(musica);
+    }
+  }
+
+  return novaPlaylist;
+}
+
+Playlist Playlist::operator + (Music& music)  {
+  Playlist novaPlaylist ;  
+  novaPlaylist.copyPlaylist(*this);
+  novaPlaylist.getList()->push(music);  
+
+  return novaPlaylist;  
+}
+
 
 
 /*

@@ -22,10 +22,11 @@ class Playlist{
     int getForIndex(Music m);
     void removeList(List<Music> &l);//new
     //teste gustavo
-    //void push(Playlist& outraPlaylist);
+    void push(Playlist& outraPlaylist);
     int remove(Playlist& otherPlaylist);
-    Playlist operator+(Playlist& outraPlaylist) ;
-
+    void copyPlaylist(Playlist& outraPlay);
+    Playlist operator + (Playlist& outraPlaylist);
+    Playlist operator + (Music& music); 
 }; 
 
 #endif

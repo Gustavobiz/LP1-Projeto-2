@@ -296,7 +296,7 @@ T popRet() {
   }
 }
 
-int find(const T& element) {
+int finding(const T& element) {
   Node<T>* current = head;
   int index = 0;
 
