@@ -117,22 +117,54 @@ public:
   /**
    * @brief Esta função remove um novo elemento da lista encadeada.
    */
-  void pop() {
-    if (isEmpty()) {
-      cout << "Não foi possível remover um elemento, pois a lista esta vazia.\n"
-           << endl;
-    } else {
-      Node<T> *temp = head;
-      head = head->next;
+//  void pop() {
+//   if (isEmpty()) {
+//     cout << "Não foi possível remover um elemento, pois a lista está vazia.\n"
+//          << endl;
+//   } else if (head == tail) { // Se houver apenas um elemento na lista
+//     delete head;
+//     head = nullptr;
+//     tail = nullptr;
+//     length = 0;
+//   } else {
+//     Node<T> *current = head;
+//     while (current->getNext() != tail) {
+//       current = current->getNext();
+//     }
 
-      if (head == nullptr) {
-        tail = nullptr;
-      }
+//     delete tail;
+//     tail = current;
+//     tail->setNext(nullptr);
+//     length--;
+//   }
+// }
 
-      delete temp;
-      length--;
+T pop() {
+  if (isEmpty()) {
+    cout << "Não foi possível remover um elemento, pois a lista está vazia.\n" << endl;
+    // Retorne um valor padrão ou lance uma exceção, dependendo do requisito do seu programa.
+    return T();
+  } else if (head == tail) { // Se houver apenas um elemento na lista
+    T removedElement = tail->getValue();
+    delete tail;
+    head = nullptr;
+    tail = nullptr;
+    length = 0;
+    return removedElement;
+  } else {
+    Node<T> *current = head;
+    while (current->getNext() != tail) {
+      current = current->getNext();
     }
+
+    T removedElement = tail->getValue();
+    delete tail;
+    tail = current;
+    tail->setNext(nullptr);
+    length--;
+    return removedElement;
   }
+}
 
 
 

@@ -17,6 +17,10 @@ void Music::setArtist(string a) {
   artist = a;
 }
 
+void Music::setNulo() {
+  Nulo = nullptr;
+}
+
 string Music::getArtist() {
   return artist;
 }

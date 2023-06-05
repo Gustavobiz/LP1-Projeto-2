@@ -11,10 +11,12 @@ class Music{
   private:
     string name; /*!< Esta variável do tipo string armazena o nome da música.*/
     string artist; /*!< Esta variável do tipo string armazena o nome do artista da música.*/
-
+    
   public:
+    bool *Nulo;
     Music();
     ~Music();
+    void setNulo();
     void setName(string n);
     string getName();
     void setArtist(string a);

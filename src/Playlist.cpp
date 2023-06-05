@@ -100,6 +100,40 @@ Playlist Playlist::operator + (Music& music)  {
   return novaPlaylist;  
 }
 
+Playlist Playlist::operator - (Playlist& outraPlaylist) {
+  Playlist novaPlaylist ; 
+  novaPlaylist.copyPlaylist(*this);
+  novaPlaylist.remove(outraPlaylist);
+  return novaPlaylist;  
+
+}
+
+Playlist Playlist::operator - (Music& music) {
+  Playlist novaPlaylist; 
+  novaPlaylist.copyPlaylist(*this);
+  for(int i=0; i<novaPlaylist.getList()->getLength();i++){ 
+    if(novaPlaylist.getList()->get(i)->getValue()==music){
+      novaPlaylist.remove(i);
+    }
+  }
+  return novaPlaylist;  
+}
+
+void Playlist::operator>>(Music& music) {
+
+  if (list.isEmpty()) {
+    music.setNulo(); // Caso não existam músicas na playlist, preenche nullptr
+  } else {
+     music=list.pop();  // Preenche a música recebida como argumento
+  }
+}
+
+void Playlist::operator<<(Music& music) {
+  if (music.Nulo != nullptr) {
+    list.push(music);  // Insere a música na última posição da playlist
+  }
+}
+
 
 
 /*

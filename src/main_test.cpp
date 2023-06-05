@@ -43,9 +43,39 @@ int main() {
   playlist1.push(music_four);
   playlist2.push(music_four);
   Playlist playlist3;
-  playlist3= playlist1 + music_three;
-  playlist3.getList()->print(0);
+  playlist3>>music_three;
+  playlist1.getList()->print(0);
+  cout<<"______________________________________________"<<endl;
+  cout<<music_three<<endl;
+  cout<<"______________________________________________"<<endl;
+  playlist2<<music_three;
+  playlist2.getList()->print(0);
+  // teste playlist - music
+  //  playlist3=playlist1-music_two;
+  //  playlist1.getList()->print(0);
+  // cout<<"______________________________________________"<<endl;
+  //  playlist3.getList()->print(0);
   
+  
+  
+  //teste play - play  
+  // playlist3=playlist1-playlist2;
+  // playlist3.getList()->print(0);
+  // cout<<"______________________________________________"<<endl;
+  //  playlist1.getList()->print(0);
+ 
+ 
+ 
+ 
+  //test remove
+  // int x = playlist2.remove(playlist1);
+  // playlist2.getList()->print(0);
+  // std::cout << x;
+
+
+  // playlist3= playlist1 + music_three;
+  // playlist3.getList()->print(0);
+
   // playlist3.copyPlaylist(playlist1);
   // playlist3.getList()->print(0);
   // cout<<"______________________________________________"<<endl;
